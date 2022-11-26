@@ -1,0 +1,1 @@
+rm -fr results/* && ./node_modules/.bin/cypress run --reporter=../cykuberunner/json-reporter.js -o output=../cykuberunner/tests/fixtures/one-fail/out.json  -c screenshotsFolder=../cykuberunner/tests/fixtures/one-fail/screenshots,videosFolder=../cykuberunner/tests/fixtures/one-fail/videos,video=true -q -s cypress/integration/test1.spec.ts

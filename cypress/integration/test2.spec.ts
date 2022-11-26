@@ -4,11 +4,11 @@ context('this is test2', () => {
     cy.visit('/');
   });
 
-  it('this should stil the correct title', () => {
+  it.skip('skipped test', () => {
+    cy.get('h1').should('contain.text', 'Dummy UI');
+  });
+
+  it('non-skipped test that passes', () => {
     cy.get('h1').should('contain.text', 'Dummy UI');
   })
-
-  it('this will also fail', () => {
-    cy.get('h2').should('contain.text', 'yyyy');
-  });
 });
