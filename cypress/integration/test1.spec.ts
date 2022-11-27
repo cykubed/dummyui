@@ -4,7 +4,6 @@ context('test1', () => {
     cy.visit('/');
   });
 
-
   it('should have the correct title', () => {
     cy.get('h1').should('contain.text', 'Dummy UI');
     cy.screenshot();
