@@ -1,4 +1,4 @@
-context('test1', () => {
+context('test context', () => {
 
   beforeEach( ()=> {
     cy.visit('/');
