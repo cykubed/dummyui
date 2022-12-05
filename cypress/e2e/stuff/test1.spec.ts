@@ -2,6 +2,7 @@ context('test context', () => {
 
   beforeEach( ()=> {
     cy.visit('/');
+    // dummy
   });
 
   it('should have the correct title', () => {
