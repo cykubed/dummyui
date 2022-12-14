@@ -11,4 +11,8 @@ context('test 3 with a longer context', () => {
   it('this will also fail horribly', () => {
     cy.get('h2').should('contain.text', 'xxx');
   });
+
+  it('as will this', () => {
+    cy.get('h2').should('contain.text', 'xxx');
+  });
 });
