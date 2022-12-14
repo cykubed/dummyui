@@ -5,6 +5,6 @@ context('another test context', () => {
   });
 
   it('this test will pass - jolly good', () => {
-    cy.get('h2').should('not.contain.text', 'xxx');
+    cy.get('h1').should('contain.text', 'Dummy');
   });
 });
