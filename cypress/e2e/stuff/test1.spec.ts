@@ -9,8 +9,8 @@ context('test1', () => {
     cy.screenshot();
   })
 
-  it('this will fail', () => {
-    cy.get('h2').should('contain.text', 'xxx');
+  it('this will now pass', () => {
+    cy.get('h1').should('contain.text', 'Dummy UI');
   });
 
   it.skip('this will be skipped', () => {
