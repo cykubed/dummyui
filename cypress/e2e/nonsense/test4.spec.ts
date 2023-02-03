@@ -7,5 +7,4 @@ context('test4', () => {
   it('should fail horribly again', () => {
     cy.get('h2').should('contain.text', 'xxx');
   });
-
 });
