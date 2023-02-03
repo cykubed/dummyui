@@ -8,4 +8,7 @@ context('test4', () => {
     cy.get('h2').should('contain.text', 'xxx');
   });
 
+  it('should pass (trivial)', () => {
+    cy.get('h2').should('be.visible');
+  });
 });
