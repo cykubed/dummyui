@@ -5,7 +5,7 @@ context('test3', () => {
   });
 
   it('should fail horribly', () => {
-    cy.get('h2').should('contain.text', 'xxx');
+    cy.get('h1').should('contain.text', 'Dummy UI');
   });
 
 });
