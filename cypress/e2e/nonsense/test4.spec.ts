@@ -7,5 +7,4 @@ context('test4', () => {
   it('should pass (trivial)', () => {
     cy.get('h3').should('be.visible');
   });
-
 });
