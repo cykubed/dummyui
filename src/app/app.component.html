@@ -8,8 +8,13 @@
       <p>This is a test</p>
 
       <h3>As is this!</h3>
+
+      <button mat-raised-button color="primary" [routerLink]="['/show']">Show</button>
     </mat-card-content>
 
   </mat-card>
 
+  <router-outlet></router-outlet>
+
 </div>
+
