@@ -8,4 +8,3 @@ context('test4', () => {
     cy.get('h3').should('be.visible');
   });
 });
-
