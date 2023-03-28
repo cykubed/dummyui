@@ -1,3 +1,5 @@
+import {getHeaderFail} from '../../lib/page1';
+
 context('test1', () => {
 
   beforeEach( ()=> {
@@ -14,6 +16,7 @@ context('test1', () => {
   });
 
   it('this will also fail', () => {
+    getHeaderFail();
     cy.get('h2').should('contain.text', 'xxx');
   });
 
