@@ -10,6 +10,4 @@ context('test3', () => {
     getHeaderFail();
     cy.get('h2').should('contain.text', 'xxx');
   });
-
-
 });
