@@ -9,8 +9,7 @@ context('this is test2', () => {
   });
 
   it('non-skipped test that passes', () => {
+    cy.intercept({pathname: '/api/fish'}, {}).as('mock1')
     cy.get('h1').should('contain.text', 'Dummy UI');
   })
-
-  it('uses')
 });
