@@ -16,7 +16,6 @@ context('test1', () => {
     shouldPass();
   })
 
-
   it('this will fail inside a helper', () => {
     shouldFail();
   });
