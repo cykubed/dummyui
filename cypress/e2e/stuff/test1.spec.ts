@@ -1,3 +1,5 @@
+import {shouldFail, shouldPass} from '../helpers/helper';
+
 context('test1', () => {
 
   beforeEach( ()=> {
@@ -11,12 +13,12 @@ context('test1', () => {
 
   it('should have the correct title', () => {
     cy.get('h1').should('contain.text', 'Dummy UI');
-    cy.screenshot();
+    shouldPass();
   })
 
 
-  it('this will fail', () => {
-    cy.get('h2').should('contain.text', 'xxx');
+  it('this will fail inside a helper', () => {
+    shouldFail();
   });
 
   it('this will also fail', () => {
