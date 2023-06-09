@@ -13,14 +13,6 @@ context('test1', () => {
     cy.get('h2').should('contain.text', 'xxx');
   });
 
-  it('this will also fail', () => {
-    cy.get('h2').should('contain.text', 'xxx');
-  });
-
-  it('this will fail as well', () => {
-    cy.get('h2').should('contain.text', 'xxx');
-  });
-
   it.skip('this will be skipped', () => {
     cy.get('h2').should('contain.text', 'xxx');
   });
