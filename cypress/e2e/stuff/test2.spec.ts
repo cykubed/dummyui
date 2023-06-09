@@ -10,5 +10,6 @@ context('this is test2', () => {
 
   it('non-skipped test that passes', () => {
     cy.get('h1').should('contain.text', 'Dummy UI');
-  })
+  });
+
 });
