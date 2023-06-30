@@ -12,4 +12,8 @@ context('this is test2', () => {
     cy.get('h1').should('contain.text', 'Dummy UI');
   });
 
+
+  it('another non-skipped test that passes', () => {
+    cy.get('h1').should('contain.text', 'Dummy UI');
+  });
 });
