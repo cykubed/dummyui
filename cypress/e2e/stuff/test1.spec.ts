@@ -11,6 +11,12 @@ context('test1', () => {
     cy.get('#next-title').should('be.visible');
   });
 
+  it('should failed after next button is clicked', () => {
+    cy.get('button').click();
+    cy.get('#next-title').should('be.visible');
+    cy.get('h3').should('contain.text', 'XXX');
+  });
+
   it('should have the correct title', () => {
     cy.get('h1').should('contain.text', 'Dummy UI');
     shouldPass();
