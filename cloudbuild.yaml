@@ -3,7 +3,7 @@ steps:
    id: 'Publish'
    script: |
        npm i -g wrangler
-       wrangler r2 object put media/index.yaml --file=/workspace/dummydist/index.yaml
+       wrangler r2 object put media/index.yaml --file=./dummydist/index.html
        wrangler pages deploy dummydist --project-name dummyui
    secretEnv: ['CLOUDFLARE_API_TOKEN', 'CLOUDFLARE_ACCOUNT_ID']
 
