@@ -14,7 +14,6 @@ steps:
       echo "{\"text\":\"Published [app.cykubed.com](https://app.cykubed.com) \"}" > payload.json
       /usr/bin/curl -X POST -H 'Content-type: application/json' --data "@payload.json" $SLACK_HOOK_URL
 
-
 availableSecrets:
   secretManager:
     - versionName: projects/1029845047729/secrets/cloudflare_api_token/versions/3
