@@ -29,8 +29,4 @@ context('test1', () => {
   //   cy.get('h2').should('contain.text', 'xxx');
   // });
 
-  it.skip('this will be skipped', () => {
-    cy.get('h2').should('contain.text', 'xxx');
-  });
-
 });
