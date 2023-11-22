@@ -1,6 +1,6 @@
 # Dummyui
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.16.
+Trivial Angular app with two pages to demo [Cykubed](https://www.cykubed.com)
 
 ## Development server
 
