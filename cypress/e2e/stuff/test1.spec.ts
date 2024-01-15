@@ -17,9 +17,23 @@ context('test1', () => {
     shouldPass();
   })
 
-  // it('this will fail inside a helper', () => {
-  //   shouldFail();
-  // });
+  it('this will fail inside a helper', () => {
+    shouldFail();
+  });
+
+  it('flakey test', () => {
+    cy.intercept('**/api/stuff', (req) => {
+      if (Cypress.currentRetry) {
+        req.reply({num: 11});
+      } else {
+        req.reply({num: 10});
+      }
+    }).as('fetch');
+    cy.get('#fetch-button').click();
+    cy.wait('@fetch');
+    cy.get('h4').should('contain.text', 11);
+
+  });
 
 
   // it('this will also fail', () => {

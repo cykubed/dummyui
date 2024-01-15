@@ -9,7 +9,16 @@
 
       <h3>As is this!</h3>
 
-      <button mat-raised-button color="primary" [routerLink]="['/show']">Show</button>
+      <h4 data-testid="num">{{ num }}</h4>
+
+      <div class="buttons">
+        <button mat-raised-button color="accent" data-testid="fetch-button" id="fetch-button"
+          (click)="fetchThing()">Fetch</button>
+
+        <button mat-raised-button color="primary"
+                [routerLink]="['/show']">Show</button>
+
+      </div>
     </mat-card-content>
 
   </mat-card>
