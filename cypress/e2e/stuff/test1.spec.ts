@@ -23,9 +23,10 @@ context('test1', () => {
 
   it('flakey test', () => {
     cy.intercept('**/api/stuff', (req) => {
-      if (Cypress.currentRetry) {
+      if (Cypress.currentRetry || Cypress.browser === 'electron') {
         req.reply({num: 11});
       } else {
+        // just fail on Firefox
         req.reply({num: 10});
       }
     }).as('fetch');
