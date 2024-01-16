@@ -8,7 +8,7 @@ context('test1', () => {
 
 
   it('should show next when button clicked', () => {
-    cy.get('button').click();
+    cy.get('button#show').click();
     cy.get('#next-title').should('be.visible');
   });
 
