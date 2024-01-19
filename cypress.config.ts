@@ -10,6 +10,6 @@ export default defineConfig({
   retries: 1,
   e2e: {
     baseUrl: "http://localhost:4200",
-    specPattern: 'cypress/e2e/stuff/*.spec.ts'
+    specPattern: 'cypress/e2e/**/*.spec.ts'
   }
 });
