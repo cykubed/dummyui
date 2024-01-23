@@ -17,9 +17,9 @@ context('test1', () => {
     shouldFail();
   })
 
-  // it('this will fail inside a helper', () => {
-  //   shouldFail();
-  // });
+  it('this will fail inside a helper', () => {
+    shouldFail();
+  });
 
   it('flakey test', () => {
     cy.intercept('**/api/stuff', (req) => {
@@ -36,10 +36,9 @@ context('test1', () => {
 
   });
 
-
-  // it('this will also fail', () => {
-  //   cy.get('h2').should('contain.text', 'xxx');
-  // });
+  it('this will also fail', () => {
+    cy.get('h2').should('contain.text', 'xxx');
+  });
   //
   // it('this will fail as well', () => {
   //   cy.get('h2').should('contain.text', 'xxx');
