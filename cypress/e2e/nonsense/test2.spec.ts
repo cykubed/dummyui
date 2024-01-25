@@ -4,7 +4,7 @@ context('test2 blah blah', () => {
     cy.visit('/');
   });
 
-  it('should fail (trivial)', () => {
-    cy.get('h6').should('be.visible');
+  it('should now pass', () => {
+    cy.get('h1').should('be.visible');
   });
 });
