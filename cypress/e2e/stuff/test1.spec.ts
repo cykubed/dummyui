@@ -15,6 +15,8 @@ context('test1', () => {
     cy.get('h1').should('contain.text', 'Dummy UI');
     // shouldFail();
   })
+
+
   //
   // it('this will fail inside a helper', () => {
   //   shouldFail();
