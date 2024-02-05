@@ -1,21 +1,36 @@
-import {Component} from '@angular/core';
-import {StuffService} from './stuff.service';
+import {Component, OnInit} from '@angular/core';
+import {FormControl} from '@angular/forms';
+import {HttpClient, HttpParams} from '@angular/common/http';
+import {startWith, switchMap, tap} from 'rxjs/operators';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'dummyui';
-  num: number = 10;
+export class AppComponent implements OnInit {
+  searchCtrl = new FormControl();
+  items: string[] = [];
 
-  constructor(private stuffService: StuffService) {
+  constructor(private client: HttpClient) {
   }
 
-  fetchThing() {
-    this.stuffService.fetch().subscribe(x => {
-      this.num = x;
-    })
+  fetch(q?: string): Observable<string[]> {
+    let params = new HttpParams();
+    if (q) {
+      params = params.set('q', q);
+    }
+    return this.client.get<string[]>('items', {params});
+  }
+
+  ngOnInit(): void {
+    this.searchCtrl.valueChanges.pipe(
+      tap(x => console.log(x)),
+      startWith(""),
+      switchMap(q => this.fetch(q))
+      ).subscribe(items => {
+       this.items = items;
+    });
   }
 }

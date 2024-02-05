@@ -1,29 +1,6 @@
-<div class="container">
-  <mat-card>
-    <mat-card-title>
-      <h1>Dummy UI</h1>
-
-    </mat-card-title>
-    <mat-card-content>
-      <p>This is a test</p>
-
-      <h3>As is this!</h3>
-
-      <h4 data-testid="num">{{ num }}</h4>
-
-      <div class="buttons">
-        <button mat-raised-button color="accent" data-testid="fetch-button" id="fetch-button"
-          (click)="fetchThing()">Fetch</button>
-
-        <button mat-raised-button color="primary" id="show"
-                [routerLink]="['/show']">Show</button>
-
-      </div>
-    </mat-card-content>
-
-  </mat-card>
-
-  <router-outlet></router-outlet>
-
-</div>
-
+<input placeholder="Select" [formControl]="searchCtrl">
+<ul *ngIf="items?.length">
+  <li *ngFor="let item of items">
+    <div class="inner">{{ item }}</div>
+  </li>
+</ul>
